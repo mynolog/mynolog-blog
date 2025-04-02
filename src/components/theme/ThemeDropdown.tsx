@@ -20,7 +20,7 @@ export default function ThemeDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="bg-transparent">
+        <Button variant="ghost" className="w-10 cursor-pointer bg-transparent">
           <ThemeToggleIcon />
         </Button>
       </DropdownMenuTrigger>
