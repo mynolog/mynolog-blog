@@ -6,7 +6,7 @@ import Navigation from './Navigation'
 
 export default function Header() {
   return (
-    <header className="sticky top-0 flex h-14 w-full items-center justify-center border-b-2 border-gray-100 bg-white dark:border-gray-700 dark:bg-black">
+    <header className="sticky top-0 z-50 flex h-14 w-full items-center justify-center border-b-2 border-gray-100 bg-white dark:border-gray-700 dark:bg-black">
       <nav className="grid h-full w-full max-w-[1200px] grid-cols-3 items-center px-6">
         {/* 네비게이션 메뉴 */}
         <Navigation />
