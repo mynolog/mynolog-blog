@@ -11,7 +11,7 @@ export default function Header() {
         {/* 네비게이션 메뉴 */}
         <Navigation />
         <HomeLink>
-          <h1 className="text-2xl font-extrabold">mynolog</h1>
+          <h1 className="hidden text-2xl font-extrabold sm:block">mynolog</h1>
         </HomeLink>
         {/* 깃헙, 테마 설정 */}
         <ul className="flex items-center justify-center gap-5">
