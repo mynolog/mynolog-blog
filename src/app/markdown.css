@@ -1,0 +1,187 @@
+.prose {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #333;
+}
+
+.prose h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 0.875rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.prose h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+
+.prose h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+
+.prose h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose ul {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.prose pre {
+  background-color: #e2e8f0;
+  color: #1e293b;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #cbd5e1;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.prose code {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.prose pre code {
+  font-size: 1rem;
+  color: inherit;
+  background: none;
+  padding: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.prose thead {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  text-align: left;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid #cbd5e1;
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.dark .prose table {
+  color: #f8fafc;
+}
+
+.dark .prose thead {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+.dark .prose tbody tr:nth-child(even) {
+  background-color: #1e293b;
+}
+
+.dark .prose th,
+.dark .prose td {
+  border: 1px solid #475569;
+}
+
+.dark .prose {
+  color: #f8fafc;
+}
+
+.dark .prose h1 {
+  color: #e2e8f0;
+}
+
+.dark .prose p {
+  color: #e2e8f0;
+}
+
+.dark .prose ul {
+  list-style: disc;
+  color: #e2e8f0;
+}
+
+.dark .prose pre {
+  background-color: #2d2d2d;
+  color: #f8fafc;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #444;
+}
+
+.dark .prose code {
+  background-color: #444;
+  color: #f8fafc;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.dark .prose pre code {
+  font-size: 1rem;
+  color: inherit;
+  background: none;
+  padding: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.dark .prose a {
+  color: #3b82f6;
+}
+
+.dark .prose a:hover {
+  color: #2563eb;
+}
