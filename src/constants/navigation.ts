@@ -3,8 +3,8 @@ import { ROUTES } from './routes'
 export const NAVIGATION_ITEMS = [
   {
     id: '1000',
-    label: 'posts',
-    href: ROUTES.POSTS,
+    label: 'blog',
+    href: ROUTES.BLOG,
   },
   {
     id: '2000',
