@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { applyTheme } from '@/utils/theme'
+import { applyTheme } from '@/lib/theme'
 
 export type Theme = 'light' | 'dark' | 'system'
 
