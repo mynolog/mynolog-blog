@@ -1,5 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import './markdown.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -117,4 +118,108 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+.prose {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #333;
+}
+
+.prose h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose ul {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.prose pre {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.prose code {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.prose pre code {
+  font-size: 1rem;
+  color: inherit;
+  background: none;
+  padding: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* 다크모드 스타일 */
+
+.prose-dark {
+  color: #f8fafc;
+}
+
+.prose-dark h1 {
+  color: #e2e8f0;
+}
+
+.prose-dark p {
+  color: #e2e8f0;
+}
+
+.prose-dark ul {
+  list-style: disc;
+  color: #e2e8f0;
+}
+
+.prose-dark pre {
+  background-color: #2d2d2d;
+  color: #f8fafc;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #444;
+}
+
+.prose-dark code {
+  background-color: #444;
+  color: #f8fafc;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.prose-dark pre code {
+  font-size: 1rem;
+  color: inherit;
+  background: none;
+  padding: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.prose-dark a {
+  color: #3b82f6;
+}
+
+.prose-dark a:hover {
+  color: #2563eb;
 }
