@@ -1,4 +1,5 @@
 import GitHubLink from '../links/GitHubLink'
+import HomeLink from '../links/HomeLink'
 import ThemeDropdown from '../theme/ThemeDropdown'
 import { Button } from '../ui/button'
 
@@ -12,6 +13,9 @@ export default function Header() {
           <li>portfolio</li>
           <li>about</li>
         </ul>
+        <HomeLink>
+          <h1 className="text-2xl font-extrabold">mynolog</h1>
+        </HomeLink>
         {/* 깃헙, 테마 설정 */}
         <ul className="flex items-center justify-center gap-5">
           <li>
