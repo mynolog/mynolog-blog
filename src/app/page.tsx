@@ -1,3 +1,6 @@
+import { redirect } from 'next/navigation'
+import { ROUTES } from '@/constants/routes'
+
 export default function Home() {
-  return <div className="text-2xl font-bold">mynolog</div>
+  redirect(ROUTES.ABOUT)
 }
