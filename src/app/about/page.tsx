@@ -6,7 +6,7 @@ export default function AboutPage() {
       <section className="w-full">
         <h2 className="py-4 text-3xl font-bold">이민호</h2>
         <p className="pb-3">
-          작은 디테일까지 고민하며 사용자 경험을 설계하는 프론트엔드 개발자
+          작은 불편도 놓치지 않기 위해 UI 흐름과 디테일을 함께 설계하는 프론트엔드 개발자
         </p>
         <ContactLinks />
       </section>
