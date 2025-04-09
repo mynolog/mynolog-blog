@@ -4,13 +4,13 @@ import { CONTACT } from '@/constants/contact'
 import EmailIcon from '../icons/EmailIcon'
 import GitHubLink from '../links/GitHubLink'
 import { Button } from '../ui/button'
-import { toast } from 'react-toastify'
+import { toast } from 'sonner'
 
 export default function ContactLinks() {
   const handleCopyEmail = () => {
     const email = CONTACT.EMAIL
     navigator.clipboard.writeText(email)
-    toast.success('📧 이메일주소가 클립보드에 저장됐습니다')
+    toast('📧 이메일 주소가 복사되었습니다.')
   }
   return (
     <div className="flex flex-col">
