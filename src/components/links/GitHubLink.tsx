@@ -1,10 +1,14 @@
-import { PROFILE } from '@/constants/profile'
-import GitHub from '../icons/GitHub'
+import { CONTACT } from '@/constants/contact'
+import GitHubIcon from '../icons/GitHubIcon'
 
-export default function GitHubLink() {
+interface GitHubLinkProps {
+  className?: string
+}
+
+export default function GitHubLink({ className = '' }: GitHubLinkProps) {
   return (
-    <a href={PROFILE.GITHUB_LINK} target="_blank" rel="noopener noreferrer">
-      <GitHub />
+    <a href={CONTACT.GITHUB_LINK} target="_blank" rel="noopener noreferrer">
+      <GitHubIcon className={className} />
     </a>
   )
 }
