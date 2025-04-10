@@ -13,21 +13,30 @@ export default function AboutPage() {
       </section>
       <section className="w-full">
         <h3 className="py-4 text-2xl font-bold">About</h3>
+        <p className="mb-3">
+          사용자 중심의 UI/UX에 관심이 많으며, 더 나은 프론트엔드 경험을 만드는 데
+          집중하고 있습니다. 리테일 현장에서 다양한 고객을 직접 응대한 경험을 바탕으로,
+          사용자 관점에서 문제를 바라보는 습관이 자연스럽게 길러졌고, 이는 개발에도 큰
+          도움이 되고 있습니다.
+        </p>
         <p>
-          리테일 현장에서 쌓은 커뮤니케이션 역량을 바탕으로 사용자 중심 UI/UX를 고민하는
-          프론트엔드 개발자를 지향합니다. 실제 프레임워크 기반 프로젝트를 통해 React,
-          Next.js Vue.js 등 다양한 기술을 경험하며 실무 감각을 키우고 있습니다.
+          React, Next.js, Vue.js 등으로 여러 사이드 프로젝트를 진행하며 UI 설계, 상태
+          관리, API 연동 등 실전 역량을 키워가고 있습니다.
         </p>
       </section>
       <section className="w-full">
         <h3 className="py-4 text-2xl font-bold">Skils</h3>
-        <div className="flex gap-1">
-          <TechBadge title="JavaScript" />
+
+        <div className="mb-1 text-sm font-semibold text-gray-500">Main</div>
+        <div className="mb-3 flex flex-wrap gap-1">
           <TechBadge title="TypeScript" />
           <TechBadge title="React" />
           <TechBadge title="Next.js" />
+        </div>
+
+        <div className="mb-1 text-sm font-semibold text-gray-500">Sub</div>
+        <div className="mb-3 flex flex-wrap gap-1">
           <TechBadge title="Vue.js" />
-          <TechBadge title="Supabase" />
           <TechBadge title="Express" />
         </div>
       </section>
@@ -78,53 +87,6 @@ export default function AboutPage() {
               <TechBadge title="TailwindCSS" />
               <TechBadge title="Express" />
               <TechBadge title="MongoDB" />
-            </div>
-          </div>
-
-          <div className="rounded border border-gray-200 p-5 dark:border-gray-700">
-            <div className="flex w-full items-center justify-between">
-              <h4 className="font-bold">
-                <a
-                  href="https://github.com/mynolog/mynote"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  MyNote
-                </a>
-              </h4>
-              <p className="text-sm">2024. 12 - 2025. 01</p>
-            </div>
-            <p className="py-2 text-sm">Vue.js와 Supabase 기반의 메모장 앱</p>
-            <div className="flex flex-wrap gap-1">
-              <TechBadge title="Vue.js" />
-              <TechBadge title="TypeScript" />
-              <TechBadge title="TailwindCSS" />
-              <TechBadge title="Pinia" />
-              <TechBadge title="Supabase" />
-            </div>
-          </div>
-
-          <div className="rounded border border-gray-200 p-5 dark:border-gray-700">
-            <div className="flex w-full items-center justify-between">
-              <h4 className="font-bold">
-                <a
-                  href="https://github.com/mynolog/mynnect"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Mynnect
-                </a>
-              </h4>
-              <p className="text-sm">2024. 12 - 2024. 12</p>
-            </div>
-            <p className="py-2 text-sm">Next.js와 Supabase 기반의 트윗 공유 앱</p>
-            <div className="flex flex-wrap gap-1">
-              <TechBadge title="Next.js" />
-              <TechBadge title="TypeScript" />
-              <TechBadge title="TailwindCSS" />
-              <TechBadge title="Zustand" />
-              <TechBadge title="SWR" />
-              <TechBadge title="Supabase" />
             </div>
           </div>
 
