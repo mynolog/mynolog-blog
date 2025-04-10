@@ -42,7 +42,7 @@ export default function AboutPage() {
       </section>
       <section className="w-full">
         <h3 className="py-4 text-2xl font-bold">Project</h3>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
           <div className="rounded border border-gray-200 p-5 dark:border-gray-700">
             <div className="flex w-full items-center justify-between">
               <h4 className="font-bold">
