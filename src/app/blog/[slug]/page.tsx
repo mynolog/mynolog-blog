@@ -4,6 +4,7 @@ import rehypeHighlight from 'rehype-highlight'
 import { getPostBySlug } from '@/lib/posts'
 import { formatDate } from '@/utils/format'
 import 'highlight.js/styles/atom-one-dark.css'
+import Comment from '@/components/ui/comment'
 
 interface BlogDetailPageProps {
   params: Promise<{ slug: string }>
@@ -22,6 +23,9 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
       <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
         {post.content}
       </ReactMarkdown>
+      <div className="pt-20">
+        <Comment />
+      </div>
     </article>
   )
 }
