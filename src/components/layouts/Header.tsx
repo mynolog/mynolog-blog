@@ -1,3 +1,6 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import GitHubLink from '../links/GitHubLink'
 import HomeLink from '../links/HomeLink'
 import ThemeDropdown from '../theme/ThemeDropdown'
@@ -5,8 +8,24 @@ import { Button } from '../ui/button'
 import Navigation from './Navigation'
 
 export default function Header() {
+  const [show, setShow] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY
+      setShow(currentY < lastScrollY || currentY < 10)
+      setLastScrollY(currentY)
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY])
+
   return (
-    <header className="sticky top-0 z-50 flex h-14 w-full items-center justify-center border-b-2 border-gray-100 bg-white dark:border-gray-700 dark:bg-black">
+    <header
+      className={`fixed top-0 z-50 flex h-14 w-full items-center justify-center border-b-2 border-gray-100 bg-white transition-transform duration-300 dark:border-gray-700 dark:bg-black ${show ? 'translate-y-0' : '-translate-y-full'}`}
+    >
       <nav className="grid h-full w-full max-w-[1200px] grid-cols-3 items-center px-6">
         {/* 네비게이션 메뉴 */}
         <Navigation />
