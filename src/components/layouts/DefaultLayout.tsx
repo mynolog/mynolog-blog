@@ -6,7 +6,7 @@ export default function DefaultLayout({ children }: { children: React.ReactNode 
   return (
     <div className="flex min-h-screen flex-col items-center">
       <Header />
-      <Main>{children}</Main>
+      <Main className="pt-28">{children}</Main>
       <Footer />
     </div>
   )
