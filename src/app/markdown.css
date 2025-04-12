@@ -1,38 +1,30 @@
 .prose {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6rem;
   color: #333;
 }
 
 .prose hr {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.875rem;
 }
 
 .prose a {
-  font-size: 1.25rem;
+  font-size: 0.95rem;
   font-weight: bold;
   color: #6bcf63;
   display: block;
 }
 
 .prose h1 {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.prose h2 {
-  font-size: 1.875rem;
-  font-weight: 600;
   margin-bottom: 0.875rem;
   padding-top: 1.25rem;
   padding-bottom: 0.5rem;
 }
 
-.prose h3 {
+.prose h2 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
@@ -40,16 +32,24 @@
   padding-bottom: 0.5rem;
 }
 
-.prose h4 {
+.prose h3 {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.625rem;
-  padding-top: 0.75rem;
+  padding-top: 0.875rem;
   padding-bottom: 0.5rem;
 }
 
-.prose h5 {
+.prose h4 {
   font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.375rem;
+}
+
+.prose h5 {
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   padding-top: 0.5rem;
@@ -57,7 +57,7 @@
 }
 
 .prose h6 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   padding-top: 0.5rem;
@@ -66,37 +66,47 @@
   letter-spacing: 0.05em;
 }
 
-.prose p {
-  margin-bottom: 1rem;
+.prose p,
+.prose ul,
+.prose ol,
+.prose li {
+  font-size: 0.95rem;
+  margin-bottom: 0.875rem;
 }
 
 .prose ul {
   list-style: disc;
-  margin-left: 2rem;
+  margin-left: 1.75rem;
 }
 
 .prose pre {
-  background-color: #e2e8f0;
+  background-color: #f5f5f5;
   color: #1e293b;
-  padding: 16px;
+  padding: 14px;
   border-radius: 8px;
   overflow-x: auto;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid #cbd5e1;
-  font-family: 'Courier New', Courier, monospace;
+  margin: 1.25rem 0;
+  border: 1px solid #dcdcdc;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.prose > pre,
+.prose > pre > code {
+  font-family: var(--font-jetBrainsMono), 'Courier New', monospace;
+  font-weight: 500;
 }
 
 .prose code {
-  background-color: #f1f5f9;
+  background-color: #f5f5f5;
   color: #1e293b;
-  padding: 2px 6px;
   border-radius: 4px;
-  font-size: 0.9rem;
+  padding: 2px 5px !important;
+  font-size: 0.85rem !important;
 }
 
 .prose pre code {
-  font-size: 1rem;
+  font-size: 0.85rem !important;
   color: inherit;
   background: none;
   padding: 0;
@@ -107,8 +117,8 @@
 .prose table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: 0.95rem;
+  margin: 1.25rem 0;
+  font-size: 0.85rem;
 }
 
 .prose thead {
@@ -120,11 +130,26 @@
 .prose th,
 .prose td {
   border: 1px solid #cbd5e1;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem;
 }
 
 .prose tbody tr:nth-child(even) {
   background-color: #f8fafc;
+}
+
+/* ======================
+   🌙 다크 모드 스타일링
+   ====================== */
+.dark .prose {
+  color: #f8fafc;
+}
+
+.dark .prose h1,
+.dark .prose p,
+.dark .prose ul,
+.dark .prose ol,
+.dark .prose li {
+  color: #e2e8f0;
 }
 
 .dark .prose table {
@@ -145,44 +170,27 @@
   border: 1px solid #475569;
 }
 
-.dark .prose {
-  color: #f8fafc;
-}
-
-.dark .prose h1 {
-  color: #e2e8f0;
-}
-
-.dark .prose p {
-  color: #e2e8f0;
-}
-
-.dark .prose ul {
-  list-style: disc;
-  color: #e2e8f0;
-}
-
 .dark .prose pre {
   background-color: #2d2d2d;
   color: #f8fafc;
-  padding: 16px;
+  padding: 14px;
   border-radius: 8px;
   overflow-x: auto;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin: 1.25rem 0;
   border: 1px solid #444;
+  font-size: 0.8rem;
 }
 
 .dark .prose code {
   background-color: #444;
   color: #f8fafc;
-  padding: 2px 6px;
+  padding: 2px 5px;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .dark .prose pre code {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: inherit;
   background: none;
   padding: 0;
@@ -192,6 +200,7 @@
 
 .dark .prose a {
   color: #3b82f6;
+  font-size: 0.95rem;
 }
 
 .dark .prose a:hover {

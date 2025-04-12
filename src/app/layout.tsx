@@ -12,6 +12,13 @@ const pretendard = localFont({
   variable: '--font-pretendard',
 })
 
+const jetbrainsMono = localFont({
+  src: './assets/fonts/JetBrainsMonoVariable.ttf',
+  display: 'swap',
+  weight: '100 800',
+  variable: '--font-jetBrainsMono',
+})
+
 export const metadata: Metadata = {
   title: 'mynolog - hello, dev',
   description: 'mynolog의 개발 블로그',
@@ -27,7 +34,7 @@ export default function RootLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className={`${pretendard.className} antialiased`}>
+      <body className={`${pretendard.className} ${jetbrainsMono.variable} antialiased`}>
         <Providers>
           <DefaultLayout>{children}</DefaultLayout>
         </Providers>

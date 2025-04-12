@@ -23,7 +23,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
       <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
         {post.content}
       </ReactMarkdown>
-      <div className="pt-20">
+      <div className="pt-6">
         <Comment />
       </div>
     </article>
