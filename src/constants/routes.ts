@@ -1,8 +1,11 @@
+import type { Category } from './posts'
+
 export const ROUTES = {
   HOME: '/',
 
   BLOG: '/blog',
-  BLOG_DETAIL: (slug: string) => `/blog/${slug}`,
+  CATEGORY: (category: Category) => `/blog/${category}`,
+  BLOG_DETAIL: (slug: string) => `/${slug}`,
 
   PORTFOLIO: '/portfolio',
 
