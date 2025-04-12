@@ -1,6 +1,6 @@
 ---
 title: '인프런 워밍업 클럽 3기 풀스택 - 2주차 발자국'
-slug: 'inflearn-warm-up-3-1'
+slug: 'inflearn-warm-up-3-2'
 date: '2025-03-13'
 category: 'devlog'
 tags: ['워밍업클럽', '3기', '발자국', '회고', '과제', '미션']
