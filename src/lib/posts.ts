@@ -1,13 +1,16 @@
-import { CATEGORIES, type Category, type ContentDirectory } from '@/constants/posts'
+import type { Category, ContentDirectory } from '@/constants/posts'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { readingTime } from 'reading-time-estimator'
+import { CATEGORIES } from '@/constants/posts'
 
 export interface PostMeta {
   title: string
   slug: string
   date: string
   category: Category
+  readingTime: number
   tags?: string[]
   description?: string
   content?: string
@@ -21,14 +24,16 @@ export function getAllPosts(directoryName: ContentDirectory): PostMeta[] {
     .map((fileName) => {
       const filePath = path.join(postsDirectory, fileName)
       const fileContents = fs.readFileSync(filePath, 'utf-8')
-      const { data } = matter(fileContents)
+      const { data, content } = matter(fileContents)
       const frontmatter = data as PostMeta
+      const readingTime = estimateReadingTime(content)
 
       return {
         title: frontmatter.title,
         slug: frontmatter.slug,
         date: frontmatter.date,
         category: frontmatter.category,
+        readingTime,
         tags: frontmatter.tags ?? [],
         description: frontmatter.description ?? '',
       }
@@ -54,12 +59,14 @@ export async function getPostBySlug(
 
   const { data, content } = matter(fileContents)
   const frontmatter = data as PostMeta
+  const readingTime = estimateReadingTime(content)
 
   return {
     title: frontmatter.title,
     slug: frontmatter.slug,
     date: frontmatter.date,
     category: frontmatter.category,
+    readingTime,
     tags: frontmatter.tags ?? [],
     description: frontmatter.description ?? '',
     content,
@@ -76,4 +83,9 @@ export function countPostsByCategory(posts: PostMeta[]) {
 
   counts['all'] = posts.length
   return counts
+}
+
+export function estimateReadingTime(content: string) {
+  const result = readingTime(content, 30)
+  return result.minutes
 }
