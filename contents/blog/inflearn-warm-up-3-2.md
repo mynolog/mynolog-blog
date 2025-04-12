@@ -37,7 +37,7 @@ description: '인프런 워밍업 클럽 3기 2주차 발자국입니다.'
 
 ### 📋 2주차 미션
 
-![preview](https://cdn.inflearn.com/public/files/posts/fe1af420-86e5-4f06-bc90-4c970591927a/b218656f-9ffc-45a8-91db-11b0603b2223.png)
+![preview](/images/blog/inflearn-warm-up-3-2-1.png)
 
 [💬 GitHub 저장소](https://github.com/mynolog/inflearn-warmup-3-2-my-drop)
 [🚀 과제 시연 영상 보러가기](https://www.youtube.com/watch?v=unFhnRKPQY0)
@@ -139,7 +139,7 @@ formData.append("originalFileName, file.name)
 
 file 객체와 원본 파일명을 함께 서버로 전송 후 가공하여 Supabase Storage의 파일명에는 안전한 파일명만 저장하고 DB에 스토리지Id, 원본 파일명, 안전한 파일명, 이미지URL 등 정보를 저장했다.
 
-![erd](https://cdn.inflearn.com/public/files/posts/a0e6c06a-7040-4343-b2e0-d3fb1e9e265e/e51f58d0-1e93-4b4b-8765-9b48c4fa851d.png)
+![erd](/images/blog/inflearn-warm-up-3-2-2.png)
 
 ---
 
