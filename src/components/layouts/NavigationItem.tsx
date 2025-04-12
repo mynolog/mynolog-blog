@@ -16,7 +16,7 @@ export default function NavigationItem({ href, label }: NavigationItemProps) {
   return (
     <li
       className={clsx(
-        'rounded-md px-3 py-1 font-semibold',
+        'rounded-md px-3 py-1 text-sm font-semibold',
         isActive
           ? 'bg-gray-100 text-black hover:text-black dark:bg-white dark:text-black dark:hover:text-black'
           : 'text-gray-500 hover:text-black dark:text-gray-300 dark:hover:text-white',

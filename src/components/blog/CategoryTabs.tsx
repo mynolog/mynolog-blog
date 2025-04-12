@@ -12,10 +12,8 @@ interface CategoryTabsProps {
 export default function CategoryTabs({ counts }: CategoryTabsProps) {
   const pathname = usePathname()
 
-  console.log(counts)
-
   return (
-    <nav className="mb-2 h-14 w-full">
+    <nav className="mb-2 h-14 w-full text-sm">
       <ul className="flex h-full w-full items-center gap-6">
         {CATEGORIES.map((category) => {
           const href = category === 'all' ? ROUTES.BLOG : ROUTES.CATEGORY(category)
