@@ -18,7 +18,7 @@ export default function ContactLinks() {
         <Button variant="ghost" className="w-10 bg-transparent">
           <GitHubLink className="!h-5 !w-5"></GitHubLink>
         </Button>
-        <span className="text-sm">mynolog</span>
+        <span className="hidden text-sm sm:inline">mynolog</span>
       </div>
       <div className="flex items-center gap-1">
         <Button
@@ -28,7 +28,7 @@ export default function ContactLinks() {
         >
           <EmailIcon className="!h-5 !w-5" />
         </Button>
-        <span className="text-sm">{CONTACT.EMAIL}</span>
+        <span className="hidden text-sm sm:inline">{CONTACT.EMAIL}</span>
       </div>
     </div>
   )
