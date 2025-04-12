@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { formatDate } from '@/utils/format'
 import { ROUTES } from '@/constants/routes'
+import { Calendar1, Watch } from 'lucide-react'
 
 interface PostItemProps {
   post: PostMeta
@@ -26,9 +27,16 @@ export default function PostItem({ post }: PostItemProps) {
         </div>
         <div className="flex flex-1 flex-col justify-between p-3">
           <div>
-            <p className="mt-1 text-xs font-semibold text-gray-400">
-              {formatDate(post.date)}
-            </p>
+            <div className="flex h-full w-full items-center justify-between">
+              <p className="flex items-center text-xs font-semibold text-gray-400">
+                <Calendar1 className="h-4" />
+                <span>{formatDate(post.date)}</span>
+              </p>
+              <p className="flex items-center text-xs font-semibold text-gray-400">
+                <Watch className="h-4" />
+                <span>{post.readingTime}분</span>
+              </p>
+            </div>
             <p className="md:text-md mt-1 truncate text-sm font-extrabold">
               {post.title}
             </p>
