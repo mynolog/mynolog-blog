@@ -4,6 +4,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+::selection {
+  background-color: #a9e7cf;
+  background-color: oklch(78% 0.07 150);
+  color: #fff;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
