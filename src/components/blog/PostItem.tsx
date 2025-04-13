@@ -10,6 +10,8 @@ interface PostItemProps {
 }
 
 export default function PostItem({ post }: PostItemProps) {
+  const imageSrc =
+    post.thumbnail?.trim() || `/api/og?title=${encodeURIComponent(post.title)}`
   return (
     <li key={post.slug + post.date} className="w-full">
       <Link
@@ -18,7 +20,7 @@ export default function PostItem({ post }: PostItemProps) {
       >
         <div className="relative aspect-[5/3] w-full overflow-hidden">
           <Image
-            src={`/api/og?title=${encodeURIComponent(post.title)}`}
+            src={imageSrc}
             alt={post.title}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"

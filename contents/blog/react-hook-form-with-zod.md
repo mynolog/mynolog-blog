@@ -3,6 +3,7 @@ title: 'React Hook Form으로 유효성 검증 구현하기(feat. Zod)'
 slug: 'react-hook-form-with-zod'
 date: '2025-01-22'
 category: 'tooling'
+thumbnail: ''
 tags: ['react', 'validation']
 description: 'React Hook Form과 Zod로 유효성 검증하는 방법을 정리한 문서입니다.'
 ---

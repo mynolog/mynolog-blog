@@ -11,6 +11,7 @@ export interface PostMeta {
   date: string
   category: Category
   readingTime: number
+  thumbnail?: string
   tags?: string[]
   description?: string
   content?: string
@@ -34,6 +35,7 @@ export function getAllPosts(directoryName: ContentDirectory): PostMeta[] {
         date: frontmatter.date,
         category: frontmatter.category,
         readingTime,
+        thumbnail: frontmatter.thumbnail ?? '',
         tags: frontmatter.tags ?? [],
         description: frontmatter.description ?? '',
       }
@@ -67,6 +69,7 @@ export async function getPostBySlug(
     date: frontmatter.date,
     category: frontmatter.category,
     readingTime,
+    thumbnail: frontmatter.thumbnail ?? '',
     tags: frontmatter.tags ?? [],
     description: frontmatter.description ?? '',
     content,

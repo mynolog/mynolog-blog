@@ -3,6 +3,7 @@ title: '(내가 보려고 작성하는) 자주 사용하는 gitmoji'
 slug: 'hello-gitmoji'
 date: '2025-01-11'
 category: 'tooling'
+thumbnail: ''
 tags: ['gitmoji', 'emoji', 'git', 'workflow']
 description: '자주 사용하는 gitmoji 모음입니다.'
 ---

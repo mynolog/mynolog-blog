@@ -3,6 +3,7 @@ title: '인프런 워밍업 클럽 3기 풀스택 - 2주차 발자국'
 slug: 'inflearn-warm-up-3-2'
 date: '2025-03-13'
 category: 'devlog'
+thumbnail: '/images/blog/inflearn-warm-up-3-2/thumbnail.png'
 tags: ['워밍업클럽', '3기', '발자국', '회고', '과제', '미션']
 description: '인프런 워밍업 클럽 3기 2주차 발자국입니다.'
 ---
@@ -37,7 +38,7 @@ description: '인프런 워밍업 클럽 3기 2주차 발자국입니다.'
 
 ### 📋 2주차 미션
 
-![preview](/images/blog/inflearn-warm-up-3-2-1.png)
+![preview](/images/blog/inflearn-warm-up-3-2/01.png)
 
 [💬 GitHub 저장소](https://github.com/mynolog/inflearn-warmup-3-2-my-drop)
 [🚀 과제 시연 영상 보러가기](https://www.youtube.com/watch?v=unFhnRKPQY0)
@@ -139,7 +140,7 @@ formData.append("originalFileName, file.name)
 
 file 객체와 원본 파일명을 함께 서버로 전송 후 가공하여 Supabase Storage의 파일명에는 안전한 파일명만 저장하고 DB에 스토리지Id, 원본 파일명, 안전한 파일명, 이미지URL 등 정보를 저장했다.
 
-![erd](/images/blog/inflearn-warm-up-3-2-2.png)
+![erd](/images/blog/inflearn-warm-up-3-2/02.png)
 
 ---
 
