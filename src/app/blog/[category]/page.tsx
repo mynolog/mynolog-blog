@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import type { Category } from '@/constants/posts'
 import PostItem from '@/components/blog/PostItem'
 import { getPostsByCategory } from '@/lib/posts'
@@ -5,6 +6,17 @@ import EmptyPosts from '@/components/blog/EmptyPosts'
 
 interface BlogCategoryPageProps {
   params: Promise<{ category: Category }>
+}
+
+export async function generateMetadata({
+  params,
+}: BlogCategoryPageProps): Promise<Metadata> {
+  const { category } = await params
+
+  return {
+    title: `${category} - mynolog`,
+    description: `${category} 카테고리 게시글입니다.`,
+  }
 }
 
 export default async function BlogCategoryPage({ params }: BlogCategoryPageProps) {

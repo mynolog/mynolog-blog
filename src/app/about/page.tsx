@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import ContactLinks from '@/components/links/ContactLinks'
 import TechBadge from '@/components/ui/tech-badge'
+
+export const metadata: Metadata = {
+  title: 'about - mynolog',
+  description: 'mynolog의 소개 페이지입니다.',
+}
 
 export default function AboutPage() {
   return (

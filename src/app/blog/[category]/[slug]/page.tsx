@@ -6,9 +6,33 @@ import { formatDate } from '@/utils/format'
 import 'highlight.js/styles/atom-one-dark.css'
 import Comment from '@/components/ui/comment'
 import { Calendar1, Watch } from 'lucide-react'
+import { Metadata } from 'next'
 
 interface BlogDetailPageProps {
   params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({
+  params,
+}: BlogDetailPageProps): Promise<Metadata> {
+  const { slug } = await params
+  const post = await getPostBySlug('blog', slug)
+  const imageUrl =
+    post.thumbnail?.trim() || `/api/og?title=${encodeURIComponent(post.title)}`
+
+  return {
+    title: `${post.title} - mynolog`,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: [
+        {
+          url: imageUrl,
+        },
+      ],
+    },
+  }
 }
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {

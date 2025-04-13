@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import PostItem from '@/components/blog/PostItem'
 import { getAllPosts } from '@/lib/posts'
+
+export const metadata: Metadata = {
+  title: 'blog - mynolog',
+  description: 'mynolog의 블로그 페이지입니다.',
+}
 
 export default async function BlogPage() {
   const posts = getAllPosts('blog')

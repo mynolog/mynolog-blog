@@ -1,3 +1,10 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'portfolio - mynolog',
+  description: 'mynolog의 포트폴리오 페이지입니다.',
+}
+
 export default function PortfolioPage() {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-4">
