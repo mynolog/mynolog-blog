@@ -22,7 +22,11 @@ export default function CategoryDropdown({ counts }: CategoryDropdownProps) {
   const pathname = usePathname()
 
   const currentCategory: Category = useMemo(() => {
-    const matched = CATEGORIES.find((category) => pathname === ROUTES.CATEGORY(category))
+    const matched = CATEGORIES.find((category) => {
+      const href = ROUTES.CATEGORY(category)
+      return pathname === href || pathname.startsWith(`${href}/`)
+    })
+
     return matched ?? 'all'
   }, [pathname])
 

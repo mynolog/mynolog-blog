@@ -17,7 +17,10 @@ export default function CategoryTabs({ counts }: CategoryTabsProps) {
       <ul className="flex h-full w-full items-center gap-6">
         {CATEGORIES.map((category) => {
           const href = category === 'all' ? ROUTES.BLOG : ROUTES.CATEGORY(category)
-          const isActive = pathname === href
+          const isActive =
+            category === 'all'
+              ? pathname === href
+              : pathname === href || pathname.startsWith(`${href}`)
 
           return (
             <li
