@@ -63,12 +63,16 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
       <div className="flex flex-col gap-3 pt-6 text-xs">
         <div className="flex flex-col gap-1">
           <span>Category</span>
-          <Badge>{post.category}</Badge>
+          <Badge className="cursor-default">{post.category}</Badge>
         </div>
         <div className="flex flex-col gap-1">
           <span>Tags</span>
           <div className="flex flex-wrap gap-1">
-            {post.tags?.map((tag) => <Badge key={tag}>{tag}</Badge>)}
+            {post.tags?.map((tag) => (
+              <Badge className="cursor-default" key={tag}>
+                #{tag}
+              </Badge>
+            ))}
           </div>
         </div>
       </div>
