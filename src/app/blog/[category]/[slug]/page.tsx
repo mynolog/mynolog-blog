@@ -8,6 +8,7 @@ import Comment from '@/components/ui/comment'
 import { Calendar1, Watch } from 'lucide-react'
 import { Metadata } from 'next'
 import { Badge } from '@/components/ui/badge'
+import ScrollProgressBar from '@/components/ui/scroll-progress-bar'
 
 interface BlogDetailPageProps {
   params: Promise<{ slug: string }>
@@ -41,45 +42,48 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const post = await getPostBySlug('blog', slug)
 
   return (
-    <article className="prose w-full">
-      <h1>{post.title}</h1>
-      <div className="mb-2 flex w-full items-center justify-end gap-3 text-sm font-semibold">
-        <div className="flex items-center text-xs">
-          <p className="flex items-center gap-1 font-semibold text-gray-500">
-            <Calendar1 className="h-4" />
-            <span>{formatDate(post.date)}</span>
-          </p>
-          <p className="flex items-center gap-1 font-semibold text-gray-500">
-            <Watch className="h-4" />
-            <span>{post.readingTime}분</span>
-          </p>
-        </div>
-      </div>
-
-      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
-        {post.content}
-      </ReactMarkdown>
-
-      <div className="flex flex-col gap-3 pt-6 text-xs">
-        <div className="flex flex-col gap-1">
-          <span>Category</span>
-          <Badge className="cursor-default">{post.category}</Badge>
-        </div>
-        <div className="flex flex-col gap-1">
-          <span>Tags</span>
-          <div className="flex flex-wrap gap-1">
-            {post.tags?.map((tag) => (
-              <Badge className="cursor-default" key={tag}>
-                #{tag}
-              </Badge>
-            ))}
+    <>
+      <ScrollProgressBar />
+      <article className="prose w-full">
+        <h1>{post.title}</h1>
+        <div className="mb-2 flex w-full items-center justify-end gap-3 text-sm font-semibold">
+          <div className="flex items-center text-xs">
+            <p className="flex items-center gap-1 font-semibold text-gray-500">
+              <Calendar1 className="h-4" />
+              <span>{formatDate(post.date)}</span>
+            </p>
+            <p className="flex items-center gap-1 font-semibold text-gray-500">
+              <Watch className="h-4" />
+              <span>{post.readingTime}분</span>
+            </p>
           </div>
         </div>
-      </div>
 
-      <div className="pt-6">
-        <Comment />
-      </div>
-    </article>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+          {post.content}
+        </ReactMarkdown>
+
+        <div className="flex flex-col gap-3 pt-6 text-xs">
+          <div className="flex flex-col gap-1">
+            <span>Category</span>
+            <Badge className="cursor-default">{post.category}</Badge>
+          </div>
+          <div className="flex flex-col gap-1">
+            <span>Tags</span>
+            <div className="flex flex-wrap gap-1">
+              {post.tags?.map((tag) => (
+                <Badge className="cursor-default" key={tag}>
+                  #{tag}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-6">
+          <Comment />
+        </div>
+      </article>
+    </>
   )
 }
