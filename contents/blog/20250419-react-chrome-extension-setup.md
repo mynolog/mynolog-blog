@@ -1,6 +1,6 @@
 ---
 title: 'React + Vite로 크롬 확장 개발하기 (셋업)'
-slug: 'react-chrome-extension-setup'
+slug: '20250419-react-chrome-extension-setup'
 date: '2025-04-19'
 category: 'react'
 thumbnail: ''
@@ -58,12 +58,12 @@ pnpm run build
 #### 3. 크롬에 확장 프로그램 등록
 
 - 크롬 주소창에 `chrome://extensions/` 입력
-  ![크롬_확장_설정_페이지](/images/blog/react-chrome-extension-setup/01.png)
+  ![크롬_확장_설정_페이지](/images/blog/20250419-react-chrome-extension-setup/01.png)
 - 오른쪽 상단 `개발자 모드: On`으로 변경
-  ![크롬_확장_설정_페이지_개발자_모드](/images/blog/react-chrome-extension-setup/02.png)
+  ![크롬_확장_설정_페이지_개발자_모드](/images/blog/20250419-react-chrome-extension-setup/02.png)
 - 왼쪽 상단 `압축해제된 확장 프로그램을 로드합니다.` 버튼 클릭
 - `/dist` 디렉토리 선택
-  ![크롬_확장_설정_페이지_앱_추가](/images/blog/react-chrome-extension-setup/03.png)
+  ![크롬_확장_설정_페이지_앱_추가](/images/blog/20250419-react-chrome-extension-setup/03.png)
 
 크롬 확장 프로그램은 어떻게 개발할까 항상 궁금했었는데 실제로 적용해보니 React + Vite 프로젝트로 가볍게 시작할 수 있습니다.
 간단한 사이드 프로젝트를 확장 프로그램으로 배포해보고 싶은 분들께 도움이 되었으면 좋겠습니다.

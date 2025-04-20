@@ -1,6 +1,6 @@
 ---
 title: '(내가 보려고 작성하는) 자주 사용하는 gitmoji'
-slug: 'hello-gitmoji'
+slug: '20250111-hello-gitmoji'
 date: '2025-01-11'
 category: 'tooling'
 thumbnail: ''

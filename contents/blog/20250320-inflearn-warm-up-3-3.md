@@ -1,9 +1,9 @@
 ---
 title: '인프런 워밍업 클럽 3기 풀스택 - 3주차 발자국'
-slug: 'inflearn-warm-up-3-3'
+slug: '20250320-inflearn-warm-up-3-3'
 date: '2025-03-20'
 category: 'devlog'
-thumbnail: '/images/blog/inflearn-warm-up-3-3/thumbnail.png'
+thumbnail: '/images/blog/20250320-inflearn-warm-up-3-3/thumbnail.png'
 tags: ['워밍업클럽', '3기', '발자국', '회고', '과제', '미션']
 description: '인프런 워밍업 클럽 3기 3주차 발자국입니다.'
 ---
@@ -35,7 +35,7 @@ description: '인프런 워밍업 클럽 3기 3주차 발자국입니다.'
 
 ### 📋 3주차 미션
 
-![preview](/images/blog/inflearn-warm-up-3-3/01.png)
+![preview](/images/blog/20250320-inflearn-warm-up-3-3/01.png)
 
 [💬 GitHub 저장소](https://github.com/mynolog/inflearn-warmup-3-3-my-reel)
 [🚀 과제 시연 영상 보러가기](https://www.youtube.com/watch?v=o5BwgEixAbE)
@@ -88,7 +88,7 @@ WHERE slug IS NULL;
 
 `api/movies/:slug/like`
 
-![like movie](/images/blog/inflearn-warm-up-3-3/02.png)
+![like movie](/images/blog/20250320-inflearn-warm-up-3-3/02.png)
 
 ```typescript
 const likeMovie = async () => {
@@ -132,7 +132,7 @@ const likeMovie = async () => {
 
 `api/movies/:slug/unlike`
 
-![unlike movie](/images/blog/inflearn-warm-up-3-3/03.png)
+![unlike movie](/images/blog/20250320-inflearn-warm-up-3-3/03.png)
 
 ```typescript
 const unlikeMovie = async () => {
@@ -177,7 +177,7 @@ const unlikeMovie = async () => {
 
 `api/movies/most-liked`
 
-![unlike movie](/images/blog/inflearn-warm-up-3-3/04.png)
+![unlike movie](/images/blog/20250320-inflearn-warm-up-3-3/04.png)
 
 ---
 

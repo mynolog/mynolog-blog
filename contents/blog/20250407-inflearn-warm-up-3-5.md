@@ -1,14 +1,14 @@
 ---
 title: '인프런 워밍업 클럽 3기 풀스택 - 스터디 후기'
-slug: 'inflearn-warm-up-3-5'
+slug: '20250407-inflearn-warm-up-3-5'
 date: '2025-04-07'
 category: 'devlog'
-thumbnail: '/images/blog/inflearn-warm-up-3-5/thumbnail.png'
+thumbnail: '/images/blog/20250407-inflearn-warm-up-3-5/thumbnail.png'
 tags: ['워밍업클럽', '3기', '발자국', '회고', '과제', '미션']
 description: '인프런 워밍업 클럽 3기 스터디 후기입니다.'
 ---
 
-![preview](/images/blog/inflearn-warm-up-3-5/01.png)
+![preview](/images/blog/20250407-inflearn-warm-up-3-5/01.png)
 [인프런 워밍업 클럽 3기 - 풀스택(Next.js, Supabase)](https://www.inflearn.com/course/offline/warmup-club-3-fs)
 
 워밍업 클럽을 처음 알게 된 건 사실 이번 3기가 아니라 지난 2기 때였다.

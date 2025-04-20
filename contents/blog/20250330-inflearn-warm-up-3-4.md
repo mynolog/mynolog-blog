@@ -1,9 +1,9 @@
 ---
 title: '인프런 워밍업 클럽 3기 풀스택 - 4주차 발자국'
-slug: 'inflearn-warm-up-3-4'
+slug: '20250330-inflearn-warm-up-3-4'
 date: '2025-03-30'
 category: 'devlog'
-thumbnail: '/images/blog/inflearn-warm-up-3-4/thumbnail.png'
+thumbnail: '/images/blog/20250330-inflearn-warm-up-3-4/thumbnail.png'
 tags: ['워밍업클럽', '3기', '발자국', '회고', '과제', '미션']
 description: '인프런 워밍업 클럽 3기 4주차 발자국입니다.'
 ---
@@ -56,7 +56,7 @@ description: '인프런 워밍업 클럽 3기 4주차 발자국입니다.'
 
 ### 📋 3주차 미션
 
-![preview](/images/blog/inflearn-warm-up-3-4/01.png)
+![preview](/images/blog/20250330-inflearn-warm-up-3-4/01.png)
 
 [💬 GitHub 저장소](https://github.com/mynolog/inflearn-warmup-3-4-my-on)
 [🚀 배포 주소](https://myon.mynolog.me/)
@@ -88,7 +88,7 @@ Supabase Auth로 회원가입된 유저만 등록 가능
 
 회원가입 시 입력한 닉네임을 기반으로 한글과 특수 문자 등을 제거한 후 중복 발생 시 유틸함수를 통해서 suffix를 불여서 고유한 username을 자동 생성 e(회원가입 시 입력 폼의 간소화를 위한 선택)
 
-![erd](/images/blog/inflearn-warm-up-3-4/02.png)
+![erd](/images/blog/20250330-inflearn-warm-up-3-4/02.png)
 
 ##### ✅ 이메일 로그인, 회원가입
 
@@ -104,11 +104,11 @@ Supabase Auth로 회원가입된 유저만 등록 가능
 
 ##### ✅ 이메일 회원가입
 
-![email signup](/images/blog/inflearn-warm-up-3-4/03.png)
+![email signup](/images/blog/20250330-inflearn-warm-up-3-4/03.png)
 
 ##### ✅ 이메일 로그인
 
-![email login](/images/blog/inflearn-warm-up-3-4/04.png)
+![email login](/images/blog/20250330-inflearn-warm-up-3-4/04.png)
 
 ##### ✅ 1:1 채팅
 
@@ -142,7 +142,7 @@ export function generateRoomId({
 
 ##### ✅ 메시지 호버 시 삭제 아이콘 표시
 
-![soft delete](/images/blog/inflearn-warm-up-3-4/04.png)
+![soft delete](/images/blog/20250330-inflearn-warm-up-3-4/05.png)
 
 ##### 개별 챌린지 기능
 
@@ -153,7 +153,7 @@ export function generateRoomId({
 그냥 마무리하기 아쉬워서 추추가 기능으로 구현했다. 예전부터 토스트 메시지에 관심이 많았는데 직접 구현해보니 생각보다 비효율적이라서 `react-toastify` 라는 라이브러리를 적용했다.
 토스트 메시지는 스크롤이 최하단이 아닌 지난 메시지를 읽고 있을때만 우측 상단에 스택 형태로 알림을 보내도록 구현했다.
 
-![message notification](/images/blog/inflearn-warm-up-3-4/04.png)
+![message notification](/images/blog/20250330-inflearn-warm-up-3-4/06.png)
 
 ---
 
