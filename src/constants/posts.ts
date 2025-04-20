@@ -8,6 +8,7 @@ export const CATEGORIES = [
   'typescript',
   'tooling',
   'devlog',
+  'booknotes',
   'etc',
 ] as const
 

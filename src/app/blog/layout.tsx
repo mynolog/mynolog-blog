@@ -8,11 +8,11 @@ export default function BlogPageLayout({ children }: { children: React.ReactNode
 
   return (
     <div className="flex w-full flex-col">
-      <div className="hidden sm:block">
+      <div className="hidden md:block">
         <CategoryTabs counts={counts} />
       </div>
 
-      <div className="block sm:hidden">
+      <div className="block md:hidden">
         <CategoryDropdown counts={counts} />
       </div>
       {children}
