@@ -6,8 +6,8 @@ export const CATEGORIES = [
   'react',
   'next.js',
   'typescript',
-  'tooling',
   'devlog',
+  'algorithm',
   'booknotes',
   'etc',
 ] as const
