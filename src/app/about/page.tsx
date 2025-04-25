@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import ContactLinks from '@/components/links/ContactLinks'
 import TechBadge from '@/components/ui/tech-badge'
+import GitHub from '@/components/icons/GitHubIcon'
+import { ExternalLink } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'about - mynolog',
@@ -20,14 +22,11 @@ export default function AboutPage() {
       <section className="w-full">
         <h3 className="py-4 text-2xl font-bold">About</h3>
         <p className="mb-3">
-          사용자 중심의 UI/UX에 관심이 많으며, 더 나은 프론트엔드 경험을 만드는 데
-          집중하고 있습니다. 리테일 현장에서 다양한 고객을 직접 응대한 경험을 바탕으로,
-          사용자 관점에서 문제를 바라보는 습관이 자연스럽게 길러졌고, 이는 개발에도 큰
-          도움이 되고 있습니다.
-        </p>
-        <p>
-          React, Next.js, Vue.js 등으로 여러 사이드 프로젝트를 진행하며 UI 설계, 상태
-          관리, API 연동 등 실전 역량을 키워가고 있습니다.
+          사용자의 입장에서 문제를 파악하고, UI/UX를 개선하는 데 집중하는 프론트엔드
+          개발자입니다. <br />
+          매장 운영과 고객 응대 경험을 바탕으로 사용자 니즈에 민감하게 반응하며, React,
+          Next.js, Vue.js 기반의 프로젝트를 통해 UI 설계, 상태 관리, API 연동 등 실전
+          경험을 쌓아왔습니다.
         </p>
       </section>
       <section className="w-full">
@@ -48,92 +47,200 @@ export default function AboutPage() {
       </section>
       <section className="w-full">
         <h3 className="py-4 text-2xl font-bold">Project</h3>
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+
+        <div className="grid grid-cols-1 gap-2">
           <div className="rounded border border-gray-200 p-5 dark:border-gray-700">
             <div className="flex w-full items-center justify-between">
-              <h4 className="font-bold">
-                <a
-                  href="https://github.com/mynolog/inflearn-warmup-3-4-my-on"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  MyOn
-                </a>
-              </h4>
-              <p className="text-sm">2025. 03 - 2025. 04</p>
+              <h4 className="font-bold">One Song</h4>
+              <p className="text-sm">2025. 04 - 진행 중</p>
             </div>
-            <p className="py-2 text-sm">Next.js와 Supabase 기반의 실시간 채팅 앱</p>
-            <div className="flex flex-wrap gap-1">
-              <TechBadge title="Next.js" />
-              <TechBadge title="TypeScript" />
-              <TechBadge title="TailwindCSS" />
-              <TechBadge title="Zustand" />
-              <TechBadge title="React Query" />
-              <TechBadge title="Supabase" />
+            <p className="py-2 text-sm">랜덤 음악 추천 서비스</p>
+            <div className="grid gap-y-2 text-sm">
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">주요 기능</span>
+                <div className="col-span-3 space-y-1">
+                  <p className="text-gray-400 italic">[구현 중]</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">기술 스택</span>
+                <div className="col-span-3 flex flex-wrap gap-2">
+                  <TechBadge title="Next.js" />
+                  <TechBadge title="TypeScript" />
+                  <TechBadge title="TailwindCSS" />
+                  <TechBadge title="Zustand" />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">프로젝트 링크</span>
+                <div className="flex items-center gap-1 text-sm font-bold text-gray-600 hover:underline">
+                  <GitHub className="h-4 text-gray-600" />
+                  <a
+                    href="https://github.com/mynolog/one-song"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Git Repository
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
           <div className="rounded border border-gray-200 p-5 dark:border-gray-700">
             <div className="flex w-full items-center justify-between">
-              <h4 className="font-bold">
-                <a
-                  href="https://github.com/mynolog/moayo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Moayo - 모아요
-                </a>
-              </h4>
+              <h4 className="font-bold">MyOn</h4>
+              <p className="text-sm">2025. 03 - 2025. 04</p>
+            </div>
+            <p className="py-2 text-sm">
+              실시간 1:1 채팅 기능을 구현한 메시지 중심 커뮤니티 앱
+            </p>
+
+            <div className="grid gap-y-2 text-sm">
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">주요 기능</span>
+                <div className="col-span-3 space-y-1">
+                  <p>이메일/비밀번호 + 카카오 OAuth를 통한 사용자 인증</p>
+                  <p>실시간 1:1 채팅 및 메시지 동기화 (Supabase Realtime 활용)</p>
+                  <p>채팅방 생성 및 중복 방지, URL 기반 접근 제어</p>
+                  <p>본인 메시지 soft delete 및 삭제 UI 처리</p>
+                  <p>에러 발생 시 리다이렉트 및 토스트 알림 피드백</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">기술 스택</span>
+                <div className="col-span-3 flex flex-wrap gap-2">
+                  <TechBadge title="Next.js" />
+                  <TechBadge title="TypeScript" />
+                  <TechBadge title="TailwindCSS" />
+                  <TechBadge title="Zustand" />
+                  <TechBadge title="React Query" />
+                  <TechBadge title="Supabase" />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">프로젝트 링크</span>
+                <div className="flex items-center gap-1 text-sm font-bold text-gray-600 hover:underline">
+                  <GitHub className="h-4 text-gray-600" />
+                  <a
+                    href="https://github.com/mynolog/inflearn-warmup-3-4-my-on"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Git Repository
+                  </a>
+                </div>
+                <div className="flex items-center gap-1 text-sm font-bold text-gray-600 hover:underline">
+                  <ExternalLink className="h-4" />
+                  <a
+                    href="https://myon.mynolog.me"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded border border-gray-200 p-5 dark:border-gray-700">
+            <div className="flex w-full items-center justify-between">
+              <h4 className="font-bold">Moayo - 모아요</h4>
               <p className="text-sm">2025. 01 - 2025. 02</p>
             </div>
             <p className="py-2 text-sm">Vue.js와 Express 기반의 도서 리뷰 및 검색 앱</p>
-            <div className="flex flex-wrap gap-1">
-              <TechBadge title="Vue.js" />
-              <TechBadge title="TypeScript" />
-              <TechBadge title="TailwindCSS" />
-              <TechBadge title="Express" />
-              <TechBadge title="MongoDB" />
+            <div className="grid gap-y-2 text-sm">
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">주요 기능</span>
+                <div className="col-span-3 space-y-1">
+                  <p>JWT 기반 로그인 및 자동 로그아웃 구현</p>
+                  <p>알라딘 API 연동으로 도서 목록 및 검색 구현(디바운스 적용)</p>
+                  <p>리뷰 작성, 수정, 삭제 및 별점 기능 구현</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">기술 스택</span>
+                <div className="col-span-3 flex flex-wrap gap-2">
+                  <TechBadge title="Vue.js" />
+                  <TechBadge title="TypeScript" />
+                  <TechBadge title="TailwindCSS" />
+                  <TechBadge title="Express" />
+                  <TechBadge title="MongoDB" />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">프로젝트 링크</span>
+                <div className="flex items-center gap-1 text-sm font-bold text-gray-600 hover:underline">
+                  <GitHub className="h-4 text-gray-600" />
+                  <a
+                    href="https://github.com/mynolog/moayo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Git Repository
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
           <div className="rounded border border-gray-200 p-5 dark:border-gray-700">
             <div className="flex w-full items-center justify-between">
-              <h4 className="font-bold">
-                <a
-                  href="https://github.com/mynolog/pomodoro-timer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  뽀모도로 앱
-                </a>
-              </h4>
+              <h4 className="font-bold">뽀모도로 앱</h4>
               <p className="text-sm">2024. 11 - 2024. 12</p>
             </div>
             <p className="py-2 text-sm">단기 집중력 향상을 위한 React 기반 타이머 앱</p>
-            <div className="flex flex-wrap gap-1">
-              <TechBadge title="React" />
-              <TechBadge title="TypeScript" />
-              <TechBadge title="TailwindCSS" />
-            </div>
-          </div>
+            <div className="grid gap-y-2 text-sm">
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">주요 기능</span>
+                <div className="col-span-3 space-y-1">
+                  <p>분/ 초 단위 타이머 설정 기능</p>
+                  <p>타이머 일지정지/ 재시작 기능</p>
+                  <p>타이머 종료 시 Notification API 기반 알림 적용</p>
+                  <p>스톱워치 및 현재 시간 모드 제공</p>
+                </div>
+              </div>
 
-          <div className="rounded border border-gray-200 p-5 dark:border-gray-700">
-            <div className="flex w-full items-center justify-between">
-              <h4 className="font-bold">
-                <a
-                  href="https://github.com/mynolog/music-roulette"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Music Roulette
-                </a>
-              </h4>
-              <p className="text-sm">2022. 02 - 2022. 02</p>
-            </div>
-            <p className="py-2 text-sm">랜덤 음악 추천 서비스</p>
-            <div className="flex flex-wrap gap-1">
-              <TechBadge title="React" />
-              <TechBadge title="JavaScript" />
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">기술 스택</span>
+                <div className="col-span-3 flex flex-wrap gap-2">
+                  <TechBadge title="React" />
+                  <TechBadge title="TypeScript" />
+                  <TechBadge title="TailwindCSS" />
+                  <TechBadge title="Jest" />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-4 gap-2">
+                <span className="font-semibold">프로젝트 링크</span>
+                <div className="flex items-center gap-1 text-sm font-bold text-gray-600 hover:underline">
+                  <GitHub className="h-4 text-gray-600" />
+                  <a
+                    href="https://github.com/mynolog/pomodoro-timer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Git Repository
+                  </a>
+                </div>
+                <div className="flex items-center gap-1 text-sm font-bold text-gray-600 hover:underline">
+                  <ExternalLink className="h-4" />
+                  <a
+                    href="https://pomodoro-timer-five-alpha.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
