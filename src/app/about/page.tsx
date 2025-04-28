@@ -256,6 +256,16 @@ export default function AboutPage() {
         </div>
       </section>
       <section className="w-full">
+        <h3 className="py-4 text-2xl font-bold">Certification</h3>
+        <div className="rounded border border-gray-200 p-5 dark:border-gray-700">
+          <div className="flex w-full justify-between">
+            <h4 className="pb-3 font-bold">정보처리기사</h4>
+            <p className="text-sm">2016. 07</p>
+          </div>
+          <p className="text-sm">한국산업인력공단</p>
+        </div>
+      </section>
+      <section className="w-full">
         <h3 className="py-4 text-2xl font-bold">Work Experience</h3>
         <div className="rounded border border-gray-200 p-5 dark:border-gray-700">
           <div className="flex w-full justify-between">
