@@ -59,7 +59,13 @@ export default function AboutPage() {
               <div className="grid grid-cols-4 gap-2">
                 <span className="font-semibold">주요 기능</span>
                 <div className="col-span-3 space-y-1">
-                  <p className="text-gray-400 italic">[구현 중]</p>
+                  <p>Apple Music RSS 기반 국가별 인기곡 중 1곡 랜덤 추천</p>
+                  <p>
+                    미리듣기 오디오 플레이어 (재생/정지/진행 상태 표시) 추천 히스토리 저장
+                  </p>
+                  <p>소셜 로그인 (Google)</p>
+                  <p>회원/ 비회원 찜 기능 구현 및 상태 분리 저장</p>
+                  <p>찜 목록 Pagination 적용, 프라이빗 라우팅 미들웨어구성</p>
                 </div>
               </div>
 
@@ -70,6 +76,8 @@ export default function AboutPage() {
                   <TechBadge title="TypeScript" />
                   <TechBadge title="TailwindCSS" />
                   <TechBadge title="Zustand" />
+                  <TechBadge title="Supabase" />
+                  <TechBadge title="Jest" />
                 </div>
               </div>
 
@@ -83,6 +91,16 @@ export default function AboutPage() {
                     rel="noopener noreferrer"
                   >
                     Git Repository
+                  </a>
+                </div>
+                <div className="flex items-center gap-1 text-sm font-bold text-gray-600 hover:underline">
+                  <ExternalLink className="h-4" />
+                  <a
+                    href="https://one-song.mynolog.me"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
                   </a>
                 </div>
               </div>
