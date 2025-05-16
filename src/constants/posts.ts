@@ -5,6 +5,7 @@ export const CATEGORIES = [
   'all',
   'react',
   'next.js',
+  'angular',
   'typescript',
   'devlog',
   'algorithm',
